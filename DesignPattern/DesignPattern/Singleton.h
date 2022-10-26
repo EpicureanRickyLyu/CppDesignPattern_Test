@@ -1,8 +1,6 @@
 #pragma once
 #include <iostream>
 using namespace std;
-
-
 /// <summary>
 /// 单例可以很好的包装各种不同的重要的全局变量，让全局变量，方法等全都隐藏在一个类中
 /// 通过单例类的实例来调用不同的变量，更安全，也更方便管理
@@ -47,6 +45,6 @@ public:
 	}
 
 }; 
-Singleton Singleton::_instance;
+Singleton Singleton::_instance;//静态变量需要在类外初始化，相当于全局变量
 
 

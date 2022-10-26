@@ -11,6 +11,7 @@ int main()
 {
    Singleton::GetInstance().GetAllUIElement();
    //Singleton _ins = new Singleton();
+  
    NormalClass N_entity;
    N_entity.function();
    N_entity.S_function();
