@@ -1,7 +1,12 @@
 #pragma once
 #include <iostream>
 using namespace std;
-//单例可以很好的包装各种不同的
+
+
+/// <summary>
+/// 单例可以很好的包装各种不同的重要的全局变量，让全局变量，方法等全都隐藏在一个类中
+/// 通过单例类的实例来调用不同的变量，更安全，也更方便管理
+/// </summary>
 class Singleton
 {
 private:
@@ -13,7 +18,7 @@ private:
 private:
 	Singleton()
 	{
-		cout << "Default initiate" << endl << endl;
+		cout << "Default initiate singleton" << endl << endl;
 	}
 
 	Singleton(string value,int value2):data(value),data2(value2)
