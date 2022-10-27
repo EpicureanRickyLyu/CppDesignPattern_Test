@@ -35,5 +35,8 @@
     <ClInclude Include="DesignPattern\PtrMemClass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DesignPattern\factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

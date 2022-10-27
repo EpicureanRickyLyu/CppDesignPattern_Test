@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DataStructure\BinaryTree.h" />
+    <ClInclude Include="DesignPattern\factory.h" />
     <ClInclude Include="DesignPattern\NormalClass.h" />
     <ClInclude Include="DesignPattern\PtrMemClass.h" />
     <ClInclude Include="DesignPattern\PtrSingleton.h" />

@@ -5,6 +5,7 @@
 #include "DesignPattern/NormalClass.h"
 #include "DesignPattern/PtrSingleton.h"
 #include "DesignPattern/PtrMemClass.h"
+#include "DesignPattern/factory.h"
 using namespace std;
 
 #define shuchu cout<<
@@ -18,5 +19,8 @@ void temp()
 }
 int main()
 {
-
+	factory* ft = new subFactory1();
+	factory* ft2 = new subFactory2();
+	ClientCode(*ft);
+	ClientCode(*ft2);
 }
