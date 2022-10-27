@@ -3,17 +3,20 @@
 
 #include "DesignPattern/Singleton.h"
 #include "DesignPattern/NormalClass.h"
-
+#include "DesignPattern/PtrSingleton.h"
+#include "DesignPattern/PtrMemClass.h"
 using namespace std;
+
 #define shuchu cout<<
 
+void temp()
+{
+	
+	ptrMember _ins;
+	_ins.EditData();
+	
+}
 int main()
 {
-   Singleton::GetInstance().GetAllUIElement();
-   //Singleton _ins = new Singleton();
-  
-   NormalClass N_entity;
-   N_entity.function();
-   N_entity.S_function();
-   NormalClass::S_function();
+
 }

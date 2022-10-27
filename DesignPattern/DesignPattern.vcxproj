@@ -127,11 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DesignPattern.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DataStructure\BinaryTree.h" />
     <ClInclude Include="DesignPattern\NormalClass.h" />
+    <ClInclude Include="DesignPattern\PtrMemClass.h" />
+    <ClInclude Include="DesignPattern\PtrSingleton.h" />
     <ClInclude Include="DesignPattern\Singleton.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
