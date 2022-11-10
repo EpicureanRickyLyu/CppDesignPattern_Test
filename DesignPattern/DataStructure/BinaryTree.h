@@ -1,5 +1,7 @@
 #pragma once
 #include <iostream>
+#include <vector>
+#include <queue>
 using namespace std;
 struct node
 {
@@ -24,6 +26,30 @@ void traverseInOrder(struct node* temp) {
         cout << " " << temp->data;
         traverseInOrder(temp->right);
     }
+}
+    
+vector<int> IteratorLayertraverse(struct node* root)
+{
+    queue<node*> q;
+    vector<int> res;
+    q.push(root);
+    while (!q.empty())
+    {
+        int num = 0;
+        num = q.size();
+        while (num)
+        {
+            node* temp = q.front();
+            if (!temp)
+                break;
+            q.push(temp->left);
+            q.push(temp->right);
+            res.push_back(temp->data);
+            q.pop();
+            num--;
+        }
+    }
+    return res;
 }
 
 // Traverse Postorder

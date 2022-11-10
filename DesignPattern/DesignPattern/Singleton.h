@@ -9,7 +9,6 @@ class Singleton
 {
 private:
 	//need to be define outside the function
-	static Singleton _instance;
 	string data;
 	int data2;
 private:
@@ -31,6 +30,7 @@ private:
 public:
 	static Singleton& GetInstance()
 	{
+		static Singleton _instance;
 		return _instance;
 	}
 	void GetAllUIElement()
