@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <queue>
+#include <stack>
 using namespace std;
 struct node
 {
@@ -28,6 +29,28 @@ void traverseInOrder(struct node* temp) {
     }
 }
     
+//iterator inorder (left center right)
+vector<int> inorderTraversal(node* root) {
+    vector<int> res;
+    stack<node*> st;
+    node* cur = root;
+    while (cur != nullptr || !st.empty())
+    {
+        while (cur != nullptr)
+        {
+            st.push(cur);
+            cur = cur->left;//left
+        }
+        cur = st.top();
+        res.push_back(cur->data);//center
+        st.pop();
+        cur = cur->right;//right
+
+    }
+    return res;
+}
+
+
 vector<int> IteratorLayertraverse(struct node* root)
 {
     queue<node*> q;
