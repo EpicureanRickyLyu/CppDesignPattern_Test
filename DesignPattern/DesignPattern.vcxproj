@@ -130,6 +130,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Command.h" />
     <ClInclude Include="DataStructure\BinaryTree.h" />
     <ClInclude Include="DesignPattern\factory.h" />
     <ClInclude Include="DesignPattern\NormalClass.h" />

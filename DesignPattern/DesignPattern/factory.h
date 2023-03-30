@@ -14,79 +14,76 @@ public:
 	}
 };
 
-class ConcreteProduct1 :public Product
+class Gun :public Product
 {
 	
 public:
-	ConcreteProduct1()
+	Gun()
 	{
 		ProductFunction();
 		cout << "product1 created" << endl << endl;
 	}
-	~ConcreteProduct1()
+	~Gun()
 	{
+
 
 	}
 };
-class ConcreteProduct2 :public Product
+class Knife :public Product
 {
 public:
-	ConcreteProduct2()
+	Knife()
 	{
 		ProductFunction();
 		cout << "product2 created" << endl << endl;
 	}
-	~ConcreteProduct2()
+	~Knife()
 	{
 
 	}
 };
 
-class factory
+class Weaponfactory
 {
 public:
-	virtual ~factory() {};
+	virtual ~Weaponfactory() {};
 	virtual Product* CreateProduct() = 0;
-
-	void SomeLogic()
-	{
-		Product* product = this->CreateProduct();
-		cout << "factory logic" << endl;
-	}
 };
 
-class subFactory1:public factory
+class GunFactory:public Weaponfactory
 {
 private:
 
 public:
-	~subFactory1()
+	~GunFactory()
 	{
 
 	}
 	Product* CreateProduct() override
 	{
-		return new ConcreteProduct1();
+		return new Gun();
 	}
 };
-class subFactory2 :public factory
+
+class knifeFactory :public Weaponfactory
 {
 private:
 
 public:
-	~subFactory2()
+	~knifeFactory()
 	{
 
 	}
 	Product* CreateProduct() override
 	{
-		return new ConcreteProduct2();
+		return new Knife();
 	}
 };
 
-void ClientCode(factory& creator) {
+void CreateConcreateWeapon(Weaponfactory& creator) {
 	// ...
 	cout << "Client: I'm not aware of the creator's class, but it still works.\n";
-		creator.SomeLogic();
+		creator.CreateProduct();
 	// ...
-}//client 可以通过不接触任何产品的类型，而得到产品的entity
+}
+//client 可以通过不接触任何产品的类型，而得到产品的entity
